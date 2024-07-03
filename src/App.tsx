@@ -9,8 +9,8 @@ function App() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const [gameStarted, setGameStarted] = useState(false);
-  const [gameEnded, setGameEnded] = useState(null);
-  const [gameAbandoned, setGameAbandoned] = useState(null);
+  const [gameEnded, setGameEnded] = useState(false);
+  const [gameAbandoned, setGameAbandoned] = useState(false);
 
   const [playerName, setPlayerName] = useState('');
 
@@ -21,7 +21,7 @@ function App() {
   const handleStartGame = () => {
     setGameStarted(true);
   };
-  
+
   if (!gameStarted) {
     return (
       <Welcome
@@ -35,7 +35,7 @@ function App() {
   if (gameEnded) {
     return <ThankYou />;
   }
-
+  
   return <main className="App">Start</main>;
 }
 

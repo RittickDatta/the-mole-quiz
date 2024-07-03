@@ -1,0 +1,10 @@
+section {
+  display: grid;
+  place-items: center;
+  background-color: black;
+  color: white;
+}
+
+p {
+  font-size: 2rem;
+}
